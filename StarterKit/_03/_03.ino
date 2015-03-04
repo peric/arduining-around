@@ -1,5 +1,5 @@
 const int sensorPin = A0;
-const float baselineTemp = 10.0;
+const float baselineTemp = 15.0;
 
 void setup() {
   Serial.begin(9600); // open a serial port
@@ -32,7 +32,7 @@ void loop() {
     digitalWrite(2, HIGH);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
-  } else if (temperature >= baselineTemp+4 && temperature < baselineTemp+4) {
+  } else if (temperature >= baselineTemp+4 && temperature < baselineTemp+6) {
     digitalWrite(2, HIGH);
     digitalWrite(3, HIGH);
     digitalWrite(4, LOW);
